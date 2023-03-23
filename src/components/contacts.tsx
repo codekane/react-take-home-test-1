@@ -50,8 +50,9 @@ export const Contacts: FC = () => {
     <>
       <button className="open-add-contact-modal" onClick={addContact} >Add Contact</button>
       <ContactModal show={showModal} mode={modalMode} contact={modalContact} onClose={() => setShowModal(false)} updated={flagRefresh}></ContactModal>
-      <table className="contact-list">
-        <thead>        <tr>
+      <table data-testid="contacts-list" className="contact-list">
+        <thead>
+          <tr>
           <th>Name</th>
           <th>Phone Number</th>
           <th>Email</th>

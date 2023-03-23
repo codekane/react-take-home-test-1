@@ -91,7 +91,7 @@ export const ContactModal: FC<ModalProps> = ({ show, mode, contact, onClose, upd
     }
 
     return (
-        <div className="modal" onClick={() => { clearForm(); onClose(); }}>
+        <div className="modal" data-testid="contacts-modal" onClick={() => { clearForm(); onClose(); }}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
                     <h4 className="modal-title text-center">{mode} Contact</h4>
